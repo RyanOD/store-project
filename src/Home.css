@@ -1,0 +1,21 @@
+.carousel-hero {
+  text-align: left;
+  position: absolute;
+  top: 70px;
+  left: 40px;
+}
+
+.carousel-hero__heading {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.carousel-hero__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.carousel-hero__link:hover {
+  text-decoration: underline;
+  color: #fff;
+}

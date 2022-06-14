@@ -1,0 +1,154 @@
+[
+  {
+    "id": 0,
+    "category": "guitars",
+    "name": "American Ultra Stratocaster® HSS",
+    "model": "0118020795",
+    "price": 2149.99,
+    "image_v": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0118020795_gtr_frt_001_rr.jpg",
+    "image_h_front": "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0118020795_gtr_frt_001_rr.jpg",
+    "image_h_back": "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0118020795_gtr_back_001_rl.jpg",
+    "body": {
+      "style": "Stratocaster",
+      "wood": "maple"
+    },
+    "neck": {
+      "style": "Stratocaster",
+      "wood": "maple",
+      "fingerboard": "maple"
+    },
+    "neck-wood": 0,
+    "neck-fingerboard": "rosewood",
+    "total-frets": 22,
+    "colors": ["red", "orange", "yello", "green"],
+    "features": [
+      "Alder or ash body with sculpted rear contours",
+      "One Ultra Double Tap™ humbucking bridge pickup; two Ultra Noiseless Hot Strat single-coil pickups (middle and neck)",
+      "\"Modern D\"-shaped neck with Ultra satin finish",
+      "10\"-14\" compound-radius fingerboard; 22 medium-jumbo frets",
+      "Includes premium molded hardshell case"
+    ]
+  },
+  {
+    "id": 1,
+    "category": "guitars",
+    "name": "JV Modified '60s Stratocaster®",
+    "model": "344444",
+    "price": 234.44,
+    "image_v": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10004/0251862305_fen_ins_frt_1_rr.jpg",
+    "image_h_front": "https://www.fmicassets.com/Damroot/ZoomJpg/10004/0251862305_fen_ins_frt_1_rr.jpg",
+    "image_h_back": "https://www.fmicassets.com/Damroot/ZoomJpg/10004/0251862305_fen_ins_bck_1_rl.jpg",
+    "body": {
+      "style": "Stratocaster",
+      "wood": "alder"
+    },
+    "neck": {
+      "style": "Telecaster",
+      "wood": "maple",
+      "fingerboard": "maple"
+    },
+    "neck-wood": 0,
+    "neck-fingerboard": "maple",
+    "total-frets": 22,
+    "colors": ["red", "black", "white", "green"],
+    "features": [
+      "Basswood body finished in Olympic White",
+      "Thick \"V\" maple neck with 9.5\" radius maple board",
+      "Vintage-voiced pickups",
+      "6-point synchronized tremolo with bent steel saddles and vintage-style locking tuners",
+      "Push-pull pot on tone 2 adds neck pickup to switch positions 1 and 2",
+      "Medium Jumbo frets"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "guitars",
+    "name": "Player Stratocaster® HSS",
+    "model": "344444",
+    "price": 234.44,
+    "image_v": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0144522500_gtr_frt_001_rr.jpg",
+    "image_h_front": "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0144522500_gtr_frt_001_rr.jpg",
+    "image_h_back": "https://www.fmicassets.com/Damroot/LgJpg/10001/0144522500_gtr_back_001_rl.jpg",
+    "body": {
+      "style": "Stratocaster",
+      "wood": "alder"
+    },
+    "neck": {
+      "style": "Stratocaster",
+      "wood": "maple",
+      "fingerboard": "maple"
+    },
+    "neck-wood": 0,
+    "neck-fingerboard": "maple",
+    "total-frets": 22,
+    "colors": ["red", "black", "white", "green"],
+    "features": [
+      "Alder body with gloss finish",
+      "One Player Series humbucking bridge pickup; two Player Series single-coil Stratocaster middle and neck pickups",
+      "\"Modern C\"-shaped neck profile",
+      "9.5\"-radius fingerboard",
+      "2-point tremolo bridge with bent-steel saddles"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "guitars",
+    "name": "JV Modified '60s Stratocaster®",
+    "model": "344444",
+    "price": 234.44,
+    "image_v": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10004/0251862305_fen_ins_frt_1_rr.jpg",
+    "image_h_front": "https://www.fmicassets.com/Damroot/ZoomJpg/10004/0251862305_fen_ins_frt_1_rr.jpg",
+    "image_h_back": "https://www.fmicassets.com/Damroot/ZoomJpg/10004/0251862305_fen_ins_bck_1_rl.jpg",
+    "body": {
+      "style": "Stratocaster",
+      "wood": "alder"
+    },
+    "neck": {
+      "style": "Telecaster",
+      "wood": "maple",
+      "fingerboard": "maple"
+    },
+    "neck-wood": 0,
+    "neck-fingerboard": "maple",
+    "total-frets": 22,
+    "colors": ["red", "black", "white", "green"],
+    "features": [
+      "Basswood body finished in Olympic White",
+      "Thick \"V\" maple neck with 9.5\" radius maple board",
+      "Vintage-voiced pickups",
+      "6-point synchronized tremolo with bent steel saddles and vintage-style locking tuners",
+      "Push-pull pot on tone 2 adds neck pickup to switch positions 1 and 2",
+      "Medium Jumbo frets"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "guitars",
+    "name": "Player Stratocaster® HSS",
+    "model": "344444",
+    "price": 234.44,
+    "image_v": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0144522500_gtr_frt_001_rr.jpg",
+    "image_h_front": "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0144522500_gtr_frt_001_rr.jpg",
+    "image_h_back": "https://www.fmicassets.com/Damroot/LgJpg/10001/0144522500_gtr_back_001_rl.jpg",
+    "body": {
+      "style": "Stratocaster",
+      "wood": "alder"
+    },
+    "neck": {
+      "style": "Stratocaster",
+      "wood": "maple",
+      "fingerboard": "maple"
+    },
+    "neck-wood": 0,
+    "neck-fingerboard": "maple",
+    "total-frets": 22,
+    "colors": ["red", "black", "white", "green"],
+    "features": [
+      "Alder body with gloss finish",
+      "One Player Series humbucking bridge pickup; two Player Series single-coil Stratocaster middle and neck pickups",
+      "\"Modern C\"-shaped neck profile",
+      "9.5\"-radius fingerboard",
+      "2-point tremolo bridge with bent-steel saddles"
+    ]
+  }
+]

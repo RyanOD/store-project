@@ -1,0 +1,20 @@
+.product-hero__image--h {
+  height: 240px;
+  width: auto;
+  margin: 20px 0 40px 0;
+}
+
+.product-hero__image--v {
+  height: 300px;
+  width: auto;
+  margin: 20px 60px 40px 0;
+}
+
+.product-hero__image--io {
+  height: 200px;
+  width: auto;
+}
+
+.product-hero__link {
+  width: 100%;
+}

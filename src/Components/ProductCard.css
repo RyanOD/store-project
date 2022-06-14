@@ -1,0 +1,12 @@
+.product-card {
+}
+
+.product-card__image {
+  padding: 20px;
+  height: 260px;
+  width: auto;
+}
+
+.product-card__link {
+  color: #fff;
+}
