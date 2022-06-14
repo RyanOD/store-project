@@ -18,3 +18,7 @@
 .product-hero__link {
   width: 100%;
 }
+
+.product__title {
+  margin: 30px 0 0 0;
+}

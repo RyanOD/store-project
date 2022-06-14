@@ -38,7 +38,7 @@ export default function Home({ data }) {
                   </Link>
                 </Button>
               </div>
-              <img className='carousel__image' src={banner1} alt='' />
+              <img className='carousel__image' src={banner1} alt='Banner1' />
             </div>
             <div>
               <div className='carousel-hero'>
@@ -53,10 +53,10 @@ export default function Home({ data }) {
                   </Link>
                 </Button>
               </div>
-              <img className='carousel__image' src={banner2} />
+              <img className='carousel__image' src={banner2} alt='Banner2' />
             </div>
             <div>
-              <img className='carousel__image' src={banner3} />
+              <img className='carousel__image' src={banner3} alt='Banner3' />
             </div>
           </Carousel>
         </section>

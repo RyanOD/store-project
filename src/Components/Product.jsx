@@ -30,16 +30,20 @@ export default function Product({
     (productData) => productData.data().model_number === parseInt(modelNumber)
   );
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div>
-      <h1>{product[0].data().name}</h1>
+    <div className='product'>
+      <h1 className='product__title'>{product[0].data().name}</h1>
       <p>Model #: {product[0].data().model_number}</p>
       <Row>
         <Col sm={4} md={8} className='product-hero'>
           <img
             className='product-hero__image--h'
             src={product[0].data().image.h_front}
-            alt=''
+            alt={product[0].data().name}
           />
         </Col>
         <div className='col product-hero__cta'>

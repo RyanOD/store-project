@@ -20,6 +20,10 @@ export default function App() {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const getData = async () => {
       const guitars = await getDocs(collection(db, 'guitars'));
       setGuitarData(guitars.docs);
