@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import { collection, getDocs } from 'firebase/firestore';
 import db from '../_db/db';
