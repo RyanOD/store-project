@@ -6,30 +6,31 @@ export default function CartCard({ item, onRemoveFromCartHandler }) {
   return (
     <div className='cart-card'>
       <Row>
-        <Col>
-          <h3 className='cart-card__heading'>
-            {item.name} ({item.qty})
-          </h3>
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={12} sm={8} md={6} className='cart-card'>
+        <Col xs={1}>
           <Image
             fluid
             className='cart-card__image'
-            src={item.image.h_front}
+            src={item.image.v_front}
             alt={item.name}
           />
         </Col>
-        <Col xs={{ span: 12, offset: 0 }} md={{ span: 4, offset: 2 }}>
-          <p>Unit Cost = ${item.price}</p>
-          <p>Total Units = {item.qty}</p>
-          <p>Total Cost = ${Math.round(item.price * item.qty * 100) / 100}</p>
+        <Col xs={5}>
+          <h5 className='cart-card__heading'>{item.name}</h5>
           <Button onClick={() => onRemoveFromCartHandler(item)}>
             Remove from Cart
           </Button>
         </Col>
+        <Col xs={2}>
+          <p>${item.price}</p>
+        </Col>
+        <Col xs={2}>
+          <p>{item.qty}</p>
+        </Col>
+        <Col xs={2}>
+          <p>${Math.round(item.price * item.qty * 100) / 100}</p>
+        </Col>
       </Row>
+      <Row></Row>
     </div>
   );
 }
