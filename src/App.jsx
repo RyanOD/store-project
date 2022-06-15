@@ -16,7 +16,7 @@ export default function App() {
   const [guitarData, setGuitarData] = useState([]);
   const [guitarDataLoaded, setGuitarDataLoaded] = useState(false);
   const [effectsData, setEffectsData] = useState([]);
-  //const [effectsDataLoaded, setEffectsDataLoaded] = useState(false);
+  const [effectsDataLoaded, setEffectsDataLoaded] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function App() {
 
   return (
     <Container fluid>
-      {guitarDataLoaded && (
+      {guitarDataLoaded && effectsDataLoaded && (
         <Routes>
           <Route path='/' element={<Home data={guitarData} />}></Route>
           <Route
