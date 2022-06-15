@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
             className='product-card__image'
             src={product.image.v_front}
             alt={product.name}
-          />{' '}
+          />
         </Link>
         <Card.Body className='product-card__body text-left'>
           <Card.Title>{product.name}</Card.Title>

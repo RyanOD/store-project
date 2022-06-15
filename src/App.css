@@ -1,32 +1,6 @@
-/* .product__carousel {
-  display: flex;
-} */
-
-.carousel {
-}
-.carousel__image {
-}
-
-.hero {
-  /* color: white;
-  height: 300px;
-  background: url('https://images.unsplash.com/photo-1495651779359-881fde1808a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80');
-  background-position: bottom right;
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-color: #171717; */
-}
-
 .hero__copy {
   position: relative;
   top: 180px;
   left: 70px;
   font-size: 44px;
-}
-
-.footer {
-  background-color: #f8f9fa;
-  min-height: 100px;
-  padding: 40px 80px 20px 80px;
-  margin-top: 40px;
 }

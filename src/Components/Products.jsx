@@ -15,7 +15,7 @@ export default function Products({ collectionName, cartItems }) {
       setProductsLoaded(true);
     };
     getData();
-  }, []);
+  }, collectionName);
 
   return (
     <div>

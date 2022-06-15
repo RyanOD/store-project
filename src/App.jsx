@@ -39,6 +39,7 @@ export default function App() {
 
   const onAddToCartHandler = (product) => {
     // this is how you access the guitar entry in Firebase //
+
     let exists = cartItems.find(
       (inCart) => inCart.model_number === product[0].data().model_number
     );
@@ -54,13 +55,12 @@ export default function App() {
     } else {
       setCartItems([...cartItems, { ...product[0].data(), qty: 1 }]);
     }
-
-    //setCartItems((prevState) => [...prevState, product[0].data()]);
-    console.log(cartItems);
   };
 
   const onRemoveFromCartHandler = (product) => {
-    setCartItems(cartItems.filter((item) => item.id !== product.id));
+    setCartItems(
+      cartItems.filter((item) => item.model_number !== product.model_number)
+    );
   };
 
   return (
@@ -70,7 +70,9 @@ export default function App() {
           <Route path='/' element={<Home data={guitarData} />}></Route>
           <Route
             path='/products/guitars/'
-            element={<Products collectionName='guitars' />}
+            element={
+              <Products collectionName='guitars' cartItems={cartItems} />
+            }
           ></Route>
           <Route
             path='/products/guitars/:modelNumber/'
@@ -94,32 +96,21 @@ export default function App() {
                 data={effectsData}
                 onAddToCartHandler={onAddToCartHandler}
                 onRemoveFromCartHandler={onRemoveFromCartHandler}
+                cartItems={cartItems}
               />
             }
           ></Route>
-          <Route path='/cart/' element={<Cart cartItems={cartItems} />}></Route>
+          <Route
+            path='/cart/'
+            element={
+              <Cart
+                cartItems={cartItems}
+                onRemoveFromCartHandler={onRemoveFromCartHandler}
+              />
+            }
+          ></Route>
         </Routes>
       )}
-      <footer fluid className='footer'>
-        <Row>
-          <Col xs={5}>
-            <h4>Contact Us</h4>
-            <address>
-              <p>1234 Anywhere</p>
-              <p>Anytown, USA 12345</p>
-              <p>(234)344-4747</p>
-            </address>
-          </Col>
-          <Col xs={5}>
-            <h4>Links</h4>
-            <p>Guitars</p>
-            <p>Effects</p>
-          </Col>
-          <Col>
-            <p>Copyright 2022</p>
-          </Col>
-        </Row>
-      </footer>
     </Container>
   );
 }
