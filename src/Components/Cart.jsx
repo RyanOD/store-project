@@ -2,7 +2,7 @@ import React from 'react';
 import CartCard from './CartCard';
 
 export default function Cart({ cartItems }) {
-  console.log(cartItems);
+  console.log(`cartItems = ${cartItems}`);
   return (
     <div>
       {cartItems &&

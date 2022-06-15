@@ -38,7 +38,24 @@ export default function App() {
   }, []);
 
   const onAddToCartHandler = (product) => {
-    setCartItems((prevState) => [...prevState, product]);
+    // this is how you access the guitar entry in Firebase //
+    let exists = cartItems.find(
+      (inCart) => inCart.model_number === product[0].data().model_number
+    );
+
+    if (exists) {
+      setCartItems(
+        cartItems.map((item) => {
+          return item.model_number === product[0].data().model_number
+            ? { ...exists, qty: exists.qty + 1 }
+            : item;
+        })
+      );
+    } else {
+      setCartItems([...cartItems, { ...product[0].data(), qty: 1 }]);
+    }
+
+    //setCartItems((prevState) => [...prevState, product[0].data()]);
     console.log(cartItems);
   };
 
@@ -47,7 +64,7 @@ export default function App() {
   };
 
   return (
-    <Container fluid>
+    <Container>
       {guitarDataLoaded && effectsDataLoaded && (
         <Routes>
           <Route path='/' element={<Home data={guitarData} />}></Route>
@@ -83,7 +100,7 @@ export default function App() {
           <Route path='/cart/' element={<Cart cartItems={cartItems} />}></Route>
         </Routes>
       )}
-      <footer className='footer'>
+      <footer fluid className='footer'>
         <Row>
           <Col xs={5}>
             <h4>Contact Us</h4>

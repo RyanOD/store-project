@@ -1,12 +1,11 @@
 import React from 'react';
-//import data from './_data/guitarData.json';
 import ProductCard from './Components/ProductCard';
 import { Carousel } from 'react-responsive-carousel';
 import banner1 from './Assets/pedal-banner.png';
 import banner2 from './Assets/mustang-banner.png';
 import banner3 from './Assets/accessories-banner.png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Button, Row, Col } from 'react-bootstrap';
+import { Button, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
@@ -33,7 +32,7 @@ export default function Home({ data }) {
                   to the pedal
                 </h1>
                 <Button className='carousel-hero__cta'>
-                  <Link className='carousel-hero__link' to='/effects/'>
+                  <Link className='carousel-hero__link' to='/products/effects/'>
                     Get yours today
                   </Link>
                 </Button>
@@ -48,7 +47,7 @@ export default function Home({ data }) {
                   crossroads
                 </h1>
                 <Button className='carousel-hero__cta'>
-                  <Link className='carousel-hero__link' to='/guitars/'>
+                  <Link className='carousel-hero__link' to='/products/guitars/'>
                     Get yours today
                   </Link>
                 </Button>
