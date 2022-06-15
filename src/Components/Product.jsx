@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Product.css';
-import { Button, Row, Col } from 'react-bootstrap';
+import { Button, Row, Col, Image } from 'react-bootstrap';
 import Cart from './Cart';
 
 export default function Product({
@@ -40,7 +40,8 @@ export default function Product({
       <p>Model #: {product[0].data().model_number}</p>
       <Row>
         <Col sm={4} md={8} className='product-hero'>
-          <img
+          <Image
+            fluid
             className='product-hero__image--h'
             src={product[0].data().image.h_front}
             alt={product[0].data().name}
@@ -57,7 +58,7 @@ export default function Product({
         </div>
       </Row>
       <div className='row'>
-        <h3>Overview</h3>
+        <h3 className='product__headline--overview'>Overview</h3>
         {product[0].data().description.map((description) => {
           return <p>{description}</p>;
         })}
