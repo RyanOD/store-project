@@ -42,9 +42,9 @@ export default function Home({ data }) {
             <div>
               <div className='carousel-hero'>
                 <h1 className='carousel-hero__heading'>
-                  Standing at the
+                  Storm clouds on
                   <br />
-                  crossroads
+                  the horizon
                 </h1>
                 <Button className='carousel-hero__cta'>
                   <Link className='carousel-hero__link' to='/products/guitars/'>
@@ -53,9 +53,6 @@ export default function Home({ data }) {
                 </Button>
               </div>
               <img className='carousel__image' src={banner2} alt='Banner2' />
-            </div>
-            <div>
-              <img className='carousel__image' src={banner3} alt='Banner3' />
             </div>
           </Carousel>
         </section>
