@@ -14,23 +14,33 @@ export default function CartCard({ item, onRemoveFromCartHandler }) {
             alt={item.name}
           />
         </Col>
-        <Col xs={2}>
+        <Col xs={4}>
           <h5 className='cart-card__heading'>{item.name}</h5>
-          <Button onClick={() => onRemoveFromCartHandler(item)}>
+          <Button
+            className='d-none d-md-block'
+            onClick={() => onRemoveFromCartHandler(item)}
+          >
             Remove from Cart
           </Button>
         </Col>
-        <Col xs={3}>
+        <Col xs={2}>
           <p>${item.price}</p>
         </Col>
-        <Col xs={3}>
+        <Col xs={2}>
           <p>{item.qty}</p>
         </Col>
-        <Col xs={3}>
+        <Col xs={2}>
           <p>${Math.round(item.price * item.qty * 100) / 100}</p>
         </Col>
       </Row>
-      <Row></Row>
+      <Row>
+        <Button
+          className='d-md-none d-xs-block'
+          onClick={() => onRemoveFromCartHandler(item)}
+        >
+          Remove from Cart
+        </Button>
+      </Row>
     </div>
   );
 }
