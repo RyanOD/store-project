@@ -19,7 +19,15 @@ export default function Products({ collectionName, cartItems }) {
 
   return (
     <div>
-      <Row className='product__carousel'>
+      <h1 className='mt-4'>
+        Our
+        {' ' +
+          collectionName.slice(0, 1).toUpperCase() +
+          collectionName.slice(1) +
+          ' '}
+        Collection
+      </h1>
+      <Row className='product__carousel mt-2'>
         {productsLoaded &&
           products.map((product) => {
             return <ProductCard product={product.data()} />;

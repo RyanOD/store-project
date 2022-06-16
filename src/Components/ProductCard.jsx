@@ -1,13 +1,13 @@
 import React from 'react';
 import './ProductCard.css';
-import { Button, Card, Col } from 'react-bootstrap';
+import { Button, ButtonGroup, Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function ProductCard({ product }) {
   console.log(product);
   return (
-    <Col>
-      <Card className='mt-3 text-center'>
+    <Col className='product-card' xs={6} md={4} lg={3}>
+      <Card className='product-card__card mt-3 text-center'>
         <Link
           className='product-card__link'
           to={`/products/${product.category}/${product.model_number}/`}
@@ -21,14 +21,16 @@ export default function ProductCard({ product }) {
         <Card.Body className='product-card__body text-left'>
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>${product.price}</Card.Text>
-          <Button>
-            <Link
-              className='product-card__link'
-              to={`/products/${product.category}/${product.model_number}/`}
-            >
-              Learn More
-            </Link>
-          </Button>
+          <ButtonGroup>
+            <Button className='product-card__button btn-block mr-1 mt-1 btn-md'>
+              <Link
+                className='product-card__link'
+                to={`/products/${product.category}/${product.model_number}/`}
+              >
+                Learn More
+              </Link>
+            </Button>
+          </ButtonGroup>
         </Card.Body>
       </Card>
     </Col>

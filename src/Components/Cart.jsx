@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CartCard from './CartCard';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import './Cart.css';
 
 export default function Cart({ cartItems, onRemoveFromCartHandler }) {
@@ -46,20 +46,22 @@ export default function Cart({ cartItems, onRemoveFromCartHandler }) {
             />
           );
         })}
-      <Row className='cart__heading'>
-        <Col xs={10}>
-          <h5>TOTAL</h5>
-        </Col>
-        <Col xs={2}>
-          <p>
-            $
-            {inCart &&
-              cartItems.reduce((prev, curr) => {
-                return prev + Math.round(curr.qty * curr.price * 100) / 100;
-              }, 0)}
-          </p>
-        </Col>
-      </Row>
+      <Container>
+        <Row className='cart__heading'>
+          <Col xs={10}>
+            <h5>TOTAL</h5>
+          </Col>
+          <Col xs={2}>
+            <p>
+              $
+              {inCart &&
+                cartItems.reduce((prev, curr) => {
+                  return prev + Math.round(curr.qty * curr.price * 100) / 100;
+                }, 0)}
+            </p>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

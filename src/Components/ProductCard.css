@@ -1,12 +1,35 @@
 .product-card {
+  display: flex;
+}
+
+.product-card__card {
+  flex-grow: 1;
 }
 
 .product-card__image {
   padding: 20px;
-  height: 260px;
+  height: 300px;
   width: auto;
 }
 
 .product-card__link {
   color: #fff;
+  text-decoration: none;
+}
+
+.product-card__link:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card__button:hover {
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.68);
+  color: #fff;
+  font-weight: bold;
 }
