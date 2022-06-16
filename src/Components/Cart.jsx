@@ -45,16 +45,16 @@ export default function Cart({ cartItems, onRemoveFromCartHandler }) {
 
       {inCart && (
         <Row className='cart__heading--summary mb-2'>
-          <Col xs={6}>
+          <Col xs={3}>
             <h6>Product Details</h6>
           </Col>
-          <Col xs={2}>
+          <Col xs={3}>
             <h6>Unit Cost</h6>
           </Col>
-          <Col xs={2}>
+          <Col xs={3}>
             <h6>Total Units</h6>
           </Col>
-          <Col xs={2}>
+          <Col xs={3}>
             <h6>Subtotal</h6>
           </Col>
         </Row>
