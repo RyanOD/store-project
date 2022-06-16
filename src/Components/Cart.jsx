@@ -3,7 +3,12 @@ import CartCard from './CartCard';
 import { Row, Col, Container } from 'react-bootstrap';
 import './Cart.css';
 
-export default function Cart({ cartItems, onRemoveFromCartHandler }) {
+export default function Cart({
+  cartItems,
+  onRemoveFromCartHandler,
+  onIncrementCartHandler,
+  onDecrementCartHandler,
+}) {
   const [inCart, setInCart] = useState(false);
 
   useEffect(() => {
@@ -26,11 +31,11 @@ export default function Cart({ cartItems, onRemoveFromCartHandler }) {
             <h5>TOTAL</h5>
           </Col>
           <Col xs={4}>
-            <h5 className='float-right'>
+            <h5>
               $
               {inCart &&
                 cartItems.reduce((prev, curr) => {
-                  return Math.round(prev + curr.qty * curr.price * 100) / 100;
+                  return prev + Math.round(curr.qty * curr.price * 100) / 100;
                 }, 0)}
             </h5>
           </Col>
@@ -60,6 +65,8 @@ export default function Cart({ cartItems, onRemoveFromCartHandler }) {
               key={item.model_number}
               item={item}
               onRemoveFromCartHandler={onRemoveFromCartHandler}
+              onIncrementCartHandler={onIncrementCartHandler}
+              onDecrementCartHandler={onDecrementCartHandler}
             />
           );
         })}

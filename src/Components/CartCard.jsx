@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './CartCard.css';
 import { Col, Row, Button, Image } from 'react-bootstrap';
 
-export default function CartCard({ item, onRemoveFromCartHandler }) {
+export default function CartCard({
+  item,
+  onRemoveFromCartHandler,
+  onIncrementCartHandler,
+  onDecrementCartHandler,
+}) {
+  let [buttonActive, setButtonActive] = useState(true);
+
+  useEffect(() => {
+    if (item.qty < 1) {
+      setButtonActive(false);
+    } else {
+      setButtonActive(true);
+    }
+  });
   return (
     <div className='cart-card'>
       <Row>
@@ -27,7 +41,20 @@ export default function CartCard({ item, onRemoveFromCartHandler }) {
           <p>${item.price}</p>
         </Col>
         <Col xs={2}>
-          <p>{item.qty}</p>
+          <Button
+            disabled={!buttonActive}
+            className='btn btn-sm'
+            onClick={() => onDecrementCartHandler(item)}
+          >
+            -
+          </Button>
+          &nbsp; {item.qty} &nbsp;
+          <Button
+            className='btn btn-sm'
+            onClick={() => onIncrementCartHandler(item)}
+          >
+            +
+          </Button>
         </Col>
         <Col xs={2}>
           <p>${Math.round(item.price * item.qty * 100) / 100}</p>

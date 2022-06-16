@@ -63,6 +63,39 @@ export default function App() {
     );
   };
 
+  const onIncrementCartHandler = (product) => {
+    let productInCart = cartItems.find(
+      (inCart) => inCart.model_number === product.model_number
+    );
+
+    setCartItems(
+      cartItems.map((item) => {
+        return item.model_number === product.model_number
+          ? { ...productInCart, qty: productInCart.qty + 1 }
+          : item;
+      })
+    );
+  };
+
+  const onDecrementCartHandler = (product) => {
+    if (product.qty < 1) {
+      console.log('removing');
+      onRemoveFromCartHandler(product);
+    }
+
+    let productInCart = cartItems.find(
+      (inCart) => inCart.model_number === product.model_number
+    );
+
+    setCartItems(
+      cartItems.map((item) => {
+        return item.model_number === product.model_number
+          ? { ...productInCart, qty: productInCart.qty - 1 }
+          : item;
+      })
+    );
+  };
+
   return (
     <Container>
       {guitarDataLoaded && effectsDataLoaded && (
@@ -106,6 +139,8 @@ export default function App() {
               <Cart
                 cartItems={cartItems}
                 onRemoveFromCartHandler={onRemoveFromCartHandler}
+                onIncrementCartHandler={onIncrementCartHandler}
+                onDecrementCartHandler={onDecrementCartHandler}
               />
             }
           ></Route>
