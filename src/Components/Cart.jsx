@@ -47,10 +47,10 @@ export default function Cart({
           <Col xs={5}>
             <h6>Product Details</h6>
           </Col>
-          <Col xs={2}>
+          <Col xs={2} className='d-none d-sm-block'>
             <h6>Unit Cost</h6>
           </Col>
-          <Col xs={2}>
+          <Col xs={3}>
             <h6>Total Units</h6>
           </Col>
           <Col xs={2}>

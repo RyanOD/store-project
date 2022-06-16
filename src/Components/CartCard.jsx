@@ -20,7 +20,7 @@ export default function CartCard({
   return (
     <div className='cart-card'>
       <Row>
-        <Col xs={1}>
+        <Col md={1} className='d-none d-md-block'>
           <Image
             fluid
             className='cart-card__image'
@@ -28,7 +28,7 @@ export default function CartCard({
             alt={item.name}
           />
         </Col>
-        <Col xs={4}>
+        <Col xs={4} className='d-none d-md-block'>
           <h6 className='cart-card__heading'>{item.name}</h6>
           <Button
             className='d-none d-md-block'
@@ -37,10 +37,35 @@ export default function CartCard({
             Remove from Cart
           </Button>
         </Col>
-        <Col xs={2}>
+        <Col xs={5} className='d-xs-block d-sm-block d-md-none '>
+          <h6 className='cart-card__heading'>{item.name}</h6>
+          <Button
+            className='d-none d-md-block'
+            onClick={() => onRemoveFromCartHandler(item)}
+          >
+            Remove from Cart
+          </Button>
+        </Col>
+        <Col xs={2} className='d-none d-sm-block'>
           <p>${item.price}</p>
         </Col>
-        <Col xs={2}>
+        <Col xs={3} className='d-none d-sm-block'>
+          <Button
+            disabled={!buttonActive}
+            className='btn btn-sm'
+            onClick={() => onDecrementCartHandler(item)}
+          >
+            -
+          </Button>
+          &nbsp; {item.qty} &nbsp;
+          <Button
+            className='btn btn-sm'
+            onClick={() => onIncrementCartHandler(item)}
+          >
+            +
+          </Button>
+        </Col>
+        <Col xs={4} className='d-xs d-sm-none'>
           <Button
             disabled={!buttonActive}
             className='btn btn-sm'
