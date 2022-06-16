@@ -15,7 +15,7 @@ export default function CartCard({ item, onRemoveFromCartHandler }) {
           />
         </Col>
         <Col xs={4}>
-          <h5 className='cart-card__heading'>{item.name}</h5>
+          <h6 className='cart-card__heading'>{item.name}</h6>
           <Button
             className='d-none d-md-block'
             onClick={() => onRemoveFromCartHandler(item)}

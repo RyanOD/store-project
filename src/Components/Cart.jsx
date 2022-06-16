@@ -26,7 +26,7 @@ export default function Cart({ cartItems, onRemoveFromCartHandler }) {
             <h5>TOTAL</h5>
           </Col>
           <Col xs={4}>
-            <h5>
+            <h5 className='float-right'>
               $
               {inCart &&
                 cartItems.reduce((prev, curr) => {
