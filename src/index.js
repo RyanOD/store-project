@@ -36,27 +36,29 @@ root.render(
 
     <App />
 
-    <footer className='footer'>
-      <Container>
-        <Row>
-          <Col xs={5}>
-            <h4>Contact Us</h4>
-            <address>
-              <p>1234 Anywhere</p>
-              <p>Anytown, USA 12345</p>
-              <p>(234)344-4747</p>
-            </address>
-          </Col>
-          <Col xs={5}>
-            <h4>Links</h4>
-            <p>Guitars</p>
-            <p>Effects</p>
-          </Col>
-          <Col>
-            <p>Copyright 2022</p>
-          </Col>
-        </Row>
-      </Container>
-    </footer>
+    <Container>
+      <footer className='footer'>
+        <Container>
+          <Row>
+            <Col xs={5}>
+              <h4>Contact Us</h4>
+              <address>
+                <p>1234 Anywhere</p>
+                <p>Anytown, USA 12345</p>
+                <p>(234)344-4747</p>
+              </address>
+            </Col>
+            <Col xs={5}>
+              <h4>Links</h4>
+              <p>Guitars</p>
+              <p>Effects</p>
+            </Col>
+            <Col>
+              <p>Copyright 2022</p>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
+    </Container>
   </BrowserRouter>
 );
