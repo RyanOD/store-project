@@ -11,28 +11,51 @@ export default function Cart({ cartItems, onRemoveFromCartHandler }) {
   });
 
   return (
-    <>
+    <Container>
       {!inCart && (
         <Row>
-          <div className='cart'>
-            <h3 className='cart__heading'>Your cart is currently empty</h3>
-          </div>
+          <h4 className='cart__heading--empty pt-3 pb-3'>
+            Your cart is currently empty
+          </h4>
         </Row>
       )}
 
       {inCart && (
-        <Row className='cart__heading'>
+        <Row className='cart__heading--total pt-4 pb-3'>
+          <Col xs={10}>
+            <h5>
+              TOTAL = $
+              {inCart &&
+                cartItems.reduce((prev, curr) => {
+                  return Math.round(prev + curr.qty * curr.price * 100) / 100;
+                }, 0)}
+            </h5>
+          </Col>
+          <Col xs={2} className='text-right'>
+            <h5>
+              $
+              {inCart &&
+                cartItems.reduce((prev, curr) => {
+                  return Math.round(prev + curr.qty * curr.price * 100) / 100;
+                }, 0)}
+            </h5>
+          </Col>
+        </Row>
+      )}
+
+      {inCart && (
+        <Row className='cart__heading--summary mb-2'>
           <Col xs={6}>
-            <h5>Product Details</h5>
+            <h6>Product Details</h6>
           </Col>
           <Col xs={2}>
-            <h5>Unit Cost</h5>
+            <h6>Unit Cost</h6>
           </Col>
           <Col xs={2}>
-            <h5>Total Units</h5>
+            <h6>Total Units</h6>
           </Col>
           <Col xs={2}>
-            <h5>Subtotal</h5>
+            <h6>Subtotal</h6>
           </Col>
         </Row>
       )}
@@ -46,22 +69,6 @@ export default function Cart({ cartItems, onRemoveFromCartHandler }) {
             />
           );
         })}
-      <Container>
-        <Row className='cart__heading'>
-          <Col xs={10}>
-            <h5>TOTAL</h5>
-          </Col>
-          <Col xs={2}>
-            <p>
-              $
-              {inCart &&
-                cartItems.reduce((prev, curr) => {
-                  return prev + Math.round(curr.qty * curr.price * 100) / 100;
-                }, 0)}
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    </Container>
   );
 }

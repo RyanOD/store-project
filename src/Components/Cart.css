@@ -1,5 +1,12 @@
-.cart__heading {
-  margin-bottom: 20px;
+.cart__heading--empty {
+  background-color: rgb(252, 196, 176);
+}
+
+.cart__heading--total {
+  background-color: rgb(210, 238, 181);
+}
+
+.cart__heading--summary {
   background-color: beige;
   padding: 20px 0;
 }

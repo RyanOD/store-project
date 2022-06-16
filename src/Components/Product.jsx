@@ -60,18 +60,26 @@ export default function Product({ data, onAddToCartHandler, cartItems }) {
           </Button>
         </div>
       </Row>
-      <div className='row'>
+      <Row>
         <h3 className='product__headline--overview'>Overview</h3>
         {product[0].data().description.map((description, index) => {
           return <p key={index}>{description}</p>;
         })}
+      </Row>
+      <Row className='mt-4'>
         <h3>Features</h3>
-        <ul>
+      </Row>
+      <Row>
+        <ul className='product__features'>
           {Array.from(product[0].data().features).map((feature, index) => {
-            return <li key={index}>{feature}</li>;
+            return (
+              <li className='product__feature' key={index}>
+                {feature}
+              </li>
+            );
           })}
         </ul>
-      </div>
+      </Row>
     </div>
   );
 }
