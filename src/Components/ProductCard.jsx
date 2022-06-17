@@ -1,10 +1,10 @@
 import React from 'react';
 import './ProductCard.css';
-import { Button, ButtonGroup, Card, Col, Row } from 'react-bootstrap';
+import { Button, ButtonGroup, Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default function ProductCard({ product }) {
-  console.log(product);
   return (
     <Col className='product-card' xs={6} md={4} lg={3}>
       <Card className='product-card__card mt-3 text-center'>
@@ -36,3 +36,7 @@ export default function ProductCard({ product }) {
     </Col>
   );
 }
+
+ProductCard.propTypes = {
+  product: PropTypes.object.isRequired,
+};

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './CartCard.css';
 import { Col, Row, Button, Image } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 export default function CartCard({
   item,
@@ -96,3 +97,10 @@ export default function CartCard({
     </div>
   );
 }
+
+CartCard.propTypes = {
+  item: PropTypes.object.isRequired,
+  onRemoveFromCartHandler: PropTypes.func.isRequired,
+  onIncrementCartHandler: PropTypes.func.isRequired,
+  onDecrementCartHandler: PropTypes.func.isRequired,
+};

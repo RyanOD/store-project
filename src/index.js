@@ -50,8 +50,12 @@ root.render(
             </Col>
             <Col xs={5}>
               <h4>Links</h4>
-              <p>Guitars</p>
-              <p>Effects</p>
+              <p>
+                <Link to='/products/guitars/'>Guitars</Link>
+              </p>
+              <p>
+                <Link to='/products/effects/'>Effects</Link>
+              </p>
             </Col>
             <Col>
               <p>Copyright 2022</p>

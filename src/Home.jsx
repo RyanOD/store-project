@@ -3,12 +3,12 @@ import ProductCard from './Components/ProductCard';
 import { Carousel } from 'react-responsive-carousel';
 import banner1 from './Assets/pedal-banner.png';
 import banner2 from './Assets/mustang-banner.png';
-import banner3 from './Assets/accessories-banner.png';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Button, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';
+import PropTypes from 'prop-types';
 
 export default function Home({ data }) {
   return (
@@ -65,3 +65,7 @@ export default function Home({ data }) {
     </>
   );
 }
+
+Home.propTypes = {
+  data: PropTypes.array.isRequired,
+};

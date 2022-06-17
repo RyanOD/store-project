@@ -3,8 +3,9 @@ import { Row } from 'react-bootstrap';
 import ProductCard from './ProductCard';
 import { collection, getDocs } from 'firebase/firestore';
 import db from '../_db/db';
+import PropTypes from 'prop-types';
 
-export default function Products({ collectionName, cartItems }) {
+export default function Products({ collectionName }) {
   const [products, setProducts] = useState([]);
   const [productsLoaded, setProductsLoaded] = useState(false);
 
@@ -15,7 +16,7 @@ export default function Products({ collectionName, cartItems }) {
       setProductsLoaded(true);
     };
     getData();
-  }, collectionName);
+  }, [collectionName]);
 
   return (
     <div>
@@ -36,3 +37,7 @@ export default function Products({ collectionName, cartItems }) {
     </div>
   );
 }
+
+Products.propTypes = {
+  collectionName: PropTypes.string.isRequired,
+};

@@ -2,12 +2,10 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Product.css';
 import { Button, Row, Col, Image } from 'react-bootstrap';
-import Cart from './Cart';
+import PropTypes from 'prop-types';
 
 export default function Product({ data, onAddToCartHandler, cartItems }) {
   let { modelNumber } = useParams();
-
-  console.log(`cartItems = ${cartItems}`);
 
   let inCart = false;
 
@@ -16,8 +14,6 @@ export default function Product({ data, onAddToCartHandler, cartItems }) {
       (product) => product.model_number === parseInt(modelNumber)
     );
   }
-
-  console.log(inCart);
 
   let product = data.filter(
     (productData) => productData.data().model_number === parseInt(modelNumber)
@@ -83,3 +79,9 @@ export default function Product({ data, onAddToCartHandler, cartItems }) {
     </div>
   );
 }
+
+Product.propTypes = {
+  data: PropTypes.array.isRequired,
+  onRemoveFromCartHandler: PropTypes.func.isRequired,
+  cartItems: PropTypes.array.isRequired,
+};
