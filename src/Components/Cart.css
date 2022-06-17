@@ -3,6 +3,11 @@
 }
 
 .cart__heading--total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__total {
   background-color: rgb(210, 238, 181);
 }
 

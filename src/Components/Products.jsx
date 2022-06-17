@@ -31,7 +31,12 @@ export default function Products({ collectionName }) {
       <Row className='product__carousel mt-2'>
         {productsLoaded &&
           products.map((product) => {
-            return <ProductCard product={product.data()} />;
+            return (
+              <ProductCard
+                key={product.data().model_number}
+                product={product.data()}
+              />
+            );
           })}
       </Row>
     </div>

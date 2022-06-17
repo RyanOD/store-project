@@ -59,7 +59,12 @@ export default function Home({ data }) {
       </Row>
       <Row className='product__carousel'>
         {data.map((product) => {
-          return <ProductCard product={product.data()} />;
+          return (
+            <ProductCard
+              key={product.data().model_number}
+              product={product.data()}
+            />
+          );
         })}
       </Row>
     </>

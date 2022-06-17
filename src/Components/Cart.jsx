@@ -58,11 +58,9 @@ export default function Cart({
           );
         })}
       {inCart && (
-        <Row className='cart__heading--total pt-4 pb-3'>
-          <Col xs={8}>
+        <Row className='cart__total pt-4 pb-3'>
+          <Col className='cart__heading--total' xs={12}>
             <h5>TOTAL</h5>
-          </Col>
-          <Col xs={4}>
             <h5>
               $
               {inCart &&
